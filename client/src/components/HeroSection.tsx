@@ -12,7 +12,7 @@ export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const weddingDate = new Date("2024-07-13T15:00:00");
+    const weddingDate = new Date("2026-03-21T15:00:00");
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -60,10 +60,7 @@ export function HeroSection() {
 
         <div className="space-y-4 mb-16">
           <p className="text-lg md:text-xl text-foreground/90 font-serif">
-            Traditional Engagement: <span className="font-semibold">11.07.2024</span>
-          </p>
-          <p className="text-lg md:text-xl text-foreground/90 font-serif">
-            Wedding Day: <span className="font-semibold">13.07.2024</span>
+            Wedding Ceremony: <span className="font-semibold">Saturday 21st March 2026</span>
           </p>
         </div>
 

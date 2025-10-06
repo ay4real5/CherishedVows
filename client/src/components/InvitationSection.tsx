@@ -5,22 +5,13 @@ import { Card } from "@/components/ui/card";
 export function InvitationSection() {
   const events = [
     {
-      name: "Traditional Engagement",
-      date: "July 11, 2024",
-      time: "2:00 PM",
-      venue: "Family Home, Lagos",
-      address: "123 Wedding Avenue, Lagos, Nigeria",
-      mapUrl: "https://maps.google.com/?q=Lagos+Nigeria",
-      dressCode: "Traditional Attire",
-      theme: "Cultural Celebration",
-    },
-    {
       name: "Wedding Ceremony",
-      date: "July 13, 2024",
+      date: "March 21, 2026",
       time: "3:00 PM",
-      venue: "Grand Cathedral",
-      address: "456 Church Road, Lagos, Nigeria",
-      mapUrl: "https://maps.google.com/?q=Lagos+Nigeria+Cathedral",
+      venue: "Kirkleatham Walled Garden",
+      address: "Plantation Road, Redcar, TS10 4QT",
+      locationDetails: "Located just off the A174/B1269 roundabout. The nearest train station is Redcar Central.",
+      mapUrl: "https://maps.google.com/?q=Kirkleatham+Walled+Garden+Plantation+Road+Redcar+TS10+4QT",
       dressCode: "Formal / Black Tie Optional",
       theme: "Elegant Romance",
     },
@@ -34,11 +25,11 @@ export function InvitationSection() {
             You're Invited
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join us in celebrating our love story across two beautiful events
+            Join us in celebrating our special day
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {events.map((event, index) => (
             <Card key={index} className="p-8 hover-elevate">
               <div className="text-center mb-8">
@@ -70,6 +61,9 @@ export function InvitationSection() {
                   <div>
                     <p className="font-semibold text-foreground">{event.venue}</p>
                     <p className="text-muted-foreground text-sm">{event.address}</p>
+                    {event.locationDetails && (
+                      <p className="text-muted-foreground text-sm mt-1">{event.locationDetails}</p>
+                    )}
                   </div>
                 </div>
 
