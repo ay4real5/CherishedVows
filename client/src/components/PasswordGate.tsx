@@ -15,7 +15,8 @@ export function PasswordGate({ onUnlock }: PasswordGateProps) {
 
   const verifyPasswordMutation = useMutation({
     mutationFn: async (pwd: string) => {
-      return apiRequest("POST", "/api/verify-password", { password: pwd });
+      const response = await apiRequest("POST", "/api/verify-password", { password: pwd });
+      return response.json();
     },
     onSuccess: (data: any) => {
       if (data.valid) {
