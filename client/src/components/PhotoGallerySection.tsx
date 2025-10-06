@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Upload, QrCode, X, Loader2 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ObjectUploader } from "./ObjectUploader";
@@ -63,7 +64,7 @@ export function PhotoGallerySection() {
 
   const handleGetUploadParameters = async () => {
     try {
-      const response = await apiRequest("POST", "/api/photos/upload", {});
+      const response = await apiRequest("POST", "/api/photos/upload", {}) as unknown as { uploadURL: string };
       return {
         method: "PUT" as const,
         url: response.uploadURL,
@@ -82,7 +83,7 @@ export function PhotoGallerySection() {
     if (result.successful && result.successful.length > 0) {
       const uploadedFile = result.successful[0];
       completeUploadMutation.mutate({
-        photoUrl: uploadedFile.uploadURL,
+        photoUrl: uploadedFile.uploadURL || "",
         caption: uploadedFile.name,
       });
     }
