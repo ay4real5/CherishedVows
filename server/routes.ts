@@ -105,7 +105,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/verify-password", async (req, res) => {
     try {
       const { password } = req.body;
-      if (password && password.toLowerCase() === "tlc4ever") {
+      if (password && password.trim().toLowerCase() === "tlc4ever") {
         res.json({ valid: true });
       } else {
         res.status(401).json({ valid: false });

@@ -51,7 +51,7 @@ export function PasswordGate({ onUnlock }: PasswordGateProps) {
             <Lock className="w-10 h-10 text-primary" />
           </div>
           <h1 className="font-serif text-5xl mb-4 text-foreground">
-            Christiana <span className="font-script text-primary">&</span> Tambari
+            Yemisi <span className="font-script text-primary">&</span> Bisoye
           </h1>
           <p className="text-muted-foreground">Please enter the event password from your invitation</p>
         </div>
