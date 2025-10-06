@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-script text-3xl text-primary mb-4">C & T</h3>
+            <h3 className="font-script text-3xl text-primary mb-4">Y & B</h3>
             <p className="text-muted-foreground leading-relaxed">
               Join us as we celebrate our love and commitment to each other on our special day.
             </p>
@@ -82,7 +82,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center space-y-2">
           <p className="text-muted-foreground">
-            © {currentYear} Christiana & Tambari. All rights reserved.
+            © {currentYear} Yemisi & Bisoye. All rights reserved.
           </p>
           <p className="text-muted-foreground flex items-center justify-center gap-2">
             Made with <Heart className="w-4 h-4 text-primary fill-current" /> for our special day

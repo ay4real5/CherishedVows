@@ -50,11 +50,11 @@ export function HeroSection() {
       <div className="relative z-10 text-center px-8 max-w-7xl mx-auto">
         <div className="mb-12">
           <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 text-foreground animate-fade-in">
-            Christiana
+            Yemisi
           </h1>
           <div className="font-script text-5xl md:text-7xl text-primary mb-6">&</div>
           <h1 className="font-serif text-6xl md:text-8xl font-bold mb-12 text-foreground animate-fade-in">
-            Tambari Ralph
+            Bisoye
           </h1>
         </div>
 
