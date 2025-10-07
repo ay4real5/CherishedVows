@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { InvitationCard } from "@/components/InvitationCard";
 import { PasswordGate } from "@/components/PasswordGate";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
@@ -15,14 +16,29 @@ import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
+  const [showInvitation, setShowInvitation] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     const auth = sessionStorage.getItem("wedding_authenticated");
+    const hasSeenInvitation = sessionStorage.getItem("wedding_invitation_seen");
+    
     if (auth === "true") {
       setIsAuthenticated(true);
+      setShowInvitation(false);
+    } else if (hasSeenInvitation === "true") {
+      setShowInvitation(false);
     }
   }, []);
+
+  const handleEnterWebsite = () => {
+    sessionStorage.setItem("wedding_invitation_seen", "true");
+    setShowInvitation(false);
+  };
+
+  if (showInvitation) {
+    return <InvitationCard onEnter={handleEnterWebsite} />;
+  }
 
   if (!isAuthenticated) {
     return <PasswordGate onUnlock={() => setIsAuthenticated(true)} />;
