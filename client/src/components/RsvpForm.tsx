@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, Loader2 } from "lucide-react";
@@ -16,14 +15,9 @@ import { useToast } from "@/hooks/use-toast";
 
 const rsvpSchema = z.object({
   guestName: z.string().min(2, "Please enter your full name"),
-  email: z.string().email("Please enter a valid email"),
-  attendingEngagement: z.boolean(),
-  attendingWedding: z.boolean(),
-  mealPreference: z.string().optional(),
+  attending: z.boolean(),
   dietaryRestrictions: z.string().optional(),
   plusOneName: z.string().optional(),
-  plusOneEmail: z.string().email("Please enter a valid email").optional().or(z.literal("")),
-  songRequest: z.string().optional(),
 });
 
 type RsvpFormData = z.infer<typeof rsvpSchema>;
@@ -31,21 +25,16 @@ type RsvpFormData = z.infer<typeof rsvpSchema>;
 export function RsvpForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const totalSteps = 6;
+  const totalSteps = 4;
   const { toast } = useToast();
 
   const form = useForm<RsvpFormData>({
     resolver: zodResolver(rsvpSchema),
     defaultValues: {
       guestName: "",
-      email: "",
-      attendingEngagement: false,
-      attendingWedding: false,
-      mealPreference: "",
+      attending: false,
       dietaryRestrictions: "",
       plusOneName: "",
-      plusOneEmail: "",
-      songRequest: "",
     },
   });
 
@@ -142,7 +131,7 @@ export function RsvpForm() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <Card className="p-8">
-              {/* Step 1: Guest Info */}
+              {/* Step 1: Guest Name */}
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
@@ -161,19 +150,6 @@ export function RsvpForm() {
                       </FormItem>
                     )}
                   />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="john@example.com" type="email" {...field} data-testid="input-email" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                 </div>
               )}
 
@@ -181,43 +157,23 @@ export function RsvpForm() {
               {currentStep === 2 && (
                 <div className="space-y-6">
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                    Which Events Will You Attend?
+                    Will You Attend?
                   </h3>
                   <FormField
                     control={form.control}
-                    name="attendingEngagement"
+                    name="attending"
                     render={({ field }) => (
                       <FormItem className="flex items-center space-x-3 space-y-0 p-4 border rounded-md">
                         <FormControl>
                           <Checkbox
                             checked={field.value}
                             onCheckedChange={field.onChange}
-                            data-testid="checkbox-engagement"
+                            data-testid="checkbox-attending"
                           />
                         </FormControl>
                         <div className="flex-1">
                           <FormLabel className="font-medium cursor-pointer">
-                            Traditional Engagement - July 11, 2024
-                          </FormLabel>
-                        </div>
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="attendingWedding"
-                    render={({ field }) => (
-                      <FormItem className="flex items-center space-x-3 space-y-0 p-4 border rounded-md">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                            data-testid="checkbox-wedding"
-                          />
-                        </FormControl>
-                        <div className="flex-1">
-                          <FormLabel className="font-medium cursor-pointer">
-                            Wedding Ceremony - July 13, 2024
+                            Saturday 21st March 2026
                           </FormLabel>
                         </div>
                       </FormItem>
@@ -226,41 +182,8 @@ export function RsvpForm() {
                 </div>
               )}
 
-              {/* Step 3: Meal Preference */}
+              {/* Step 3: Dietary Restrictions */}
               {currentStep === 3 && (
-                <div className="space-y-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                    Meal Preference
-                  </h3>
-                  <FormField
-                    control={form.control}
-                    name="mealPreference"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Please select your meal preference</FormLabel>
-                        <Select onValueChange={field.onChange} value={field.value}>
-                          <FormControl>
-                            <SelectTrigger data-testid="select-meal">
-                              <SelectValue placeholder="Select a meal option" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="chicken">Chicken</SelectItem>
-                            <SelectItem value="beef">Beef</SelectItem>
-                            <SelectItem value="fish">Fish</SelectItem>
-                            <SelectItem value="vegetarian">Vegetarian</SelectItem>
-                            <SelectItem value="vegan">Vegan</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
-
-              {/* Step 4: Dietary Restrictions */}
-              {currentStep === 4 && (
                 <div className="space-y-6">
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
                     Dietary Restrictions
@@ -285,8 +208,8 @@ export function RsvpForm() {
                 </div>
               )}
 
-              {/* Step 5: Plus One */}
-              {currentStep === 5 && (
+              {/* Step 4: Plus One */}
+              {currentStep === 4 && (
                 <div className="space-y-6">
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
                     Plus One (Optional)
@@ -299,41 +222,6 @@ export function RsvpForm() {
                         <FormLabel>Guest Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Guest's full name" {...field} data-testid="input-plus-one-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="plusOneEmail"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Guest Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="guest@example.com" type="email" {...field} data-testid="input-plus-one-email" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
-
-              {/* Step 6: Song Request */}
-              {currentStep === 6 && (
-                <div className="space-y-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                    Song Request
-                  </h3>
-                  <FormField
-                    control={form.control}
-                    name="songRequest"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>What song would you like to hear at the reception?</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Song title and artist" {...field} data-testid="input-song-request" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

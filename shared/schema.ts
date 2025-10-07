@@ -7,14 +7,9 @@ import { sql } from "drizzle-orm";
 export const rsvps = pgTable("rsvps", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   guestName: text("guest_name").notNull(),
-  email: text("email").notNull(),
-  attendingEngagement: boolean("attending_engagement").notNull().default(false),
-  attendingWedding: boolean("attending_wedding").notNull().default(false),
-  mealPreference: text("meal_preference"),
+  attending: boolean("attending").notNull().default(false),
   dietaryRestrictions: text("dietary_restrictions"),
   plusOneName: text("plus_one_name"),
-  plusOneEmail: text("plus_one_email"),
-  songRequest: text("song_request"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
