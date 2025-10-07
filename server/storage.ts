@@ -82,6 +82,14 @@ export class MemStorage implements IStorage {
         story: "Hi! My name is Hameedah, I am a lawyer and I live and work in Manchester. I am the bride's cousin and her chief bridesmaid. I wish Yemisi and Bisoye unlimited happiness and a very very happy marriage blessed with all the good things ❤️",
         relationTo: "bride",
       },
+      {
+        name: "Uju",
+        role: "bridesmaid",
+        title: "Bridesmaid",
+        photoUrl: "/attached_assets/uju_1759829840451.jpg",
+        story: "My name is Uju, and I'm a proud bridesmaid for Yemisi! We met in 2021 and became close friends while living together. Having shared those memories, it's a true joy to now celebrate this chapter with her and Bisoye whom I met around the same time. I'm so happy my girl found her soul mate and I wish them all the very best in their union.",
+        relationTo: "bride",
+      },
     ];
 
     members.forEach(member => {
