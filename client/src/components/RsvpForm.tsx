@@ -16,7 +16,6 @@ import { useToast } from "@/hooks/use-toast";
 const rsvpSchema = z.object({
   guestName: z.string().min(2, "Please enter your full name"),
   attending: z.boolean(),
-  dietaryRestrictions: z.string().optional(),
   plusOneName: z.string().optional(),
 });
 
@@ -25,7 +24,7 @@ type RsvpFormData = z.infer<typeof rsvpSchema>;
 export function RsvpForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const totalSteps = 4;
+  const totalSteps = 3;
   const { toast } = useToast();
 
   const form = useForm<RsvpFormData>({
@@ -33,7 +32,6 @@ export function RsvpForm() {
     defaultValues: {
       guestName: "",
       attending: false,
-      dietaryRestrictions: "",
       plusOneName: "",
     },
   });
@@ -173,7 +171,7 @@ export function RsvpForm() {
                         </FormControl>
                         <div className="flex-1">
                           <FormLabel className="font-medium cursor-pointer">
-                            Saturday 21st March 2026
+                            Wedding Ceremony - Saturday 21st March 2026
                           </FormLabel>
                         </div>
                       </FormItem>
@@ -182,34 +180,8 @@ export function RsvpForm() {
                 </div>
               )}
 
-              {/* Step 3: Dietary Restrictions */}
+              {/* Step 3: Plus One */}
               {currentStep === 3 && (
-                <div className="space-y-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-                    Dietary Restrictions
-                  </h3>
-                  <FormField
-                    control={form.control}
-                    name="dietaryRestrictions"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Any allergies or dietary restrictions?</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Please let us know about any allergies or dietary requirements..."
-                            {...field}
-                            data-testid="textarea-dietary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
-
-              {/* Step 4: Plus One */}
-              {currentStep === 4 && (
                 <div className="space-y-6">
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
                     Plus One (Optional)

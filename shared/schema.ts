@@ -8,7 +8,6 @@ export const rsvps = pgTable("rsvps", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   guestName: text("guest_name").notNull(),
   attending: boolean("attending").notNull().default(false),
-  dietaryRestrictions: text("dietary_restrictions"),
   plusOneName: text("plus_one_name"),
   createdAt: timestamp("created_at").defaultNow(),
 });
