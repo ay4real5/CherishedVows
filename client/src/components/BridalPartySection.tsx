@@ -62,11 +62,11 @@ export function BridalPartySection() {
               <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-groomsman-${member.id}`}>
                 {/* Large Photo Section */}
                 {member.photoUrl && (
-                  <div className="relative h-80 w-full overflow-hidden">
+                  <div className="relative h-80 w-full overflow-hidden bg-muted">
                     <img
                       src={member.photoUrl}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -121,11 +121,11 @@ export function BridalPartySection() {
               <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-bridesmaid-${member.id}`}>
                 {/* Large Photo Section */}
                 {member.photoUrl && (
-                  <div className="relative h-80 w-full overflow-hidden">
+                  <div className="relative h-80 w-full overflow-hidden bg-muted">
                     <img
                       src={member.photoUrl}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
