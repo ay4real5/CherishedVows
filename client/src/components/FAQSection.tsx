@@ -8,44 +8,44 @@ import {
 export function FAQSection() {
   const faqs = [
     {
-      question: "What is the dress code?",
-      answer: "For the Traditional Engagement (July 11), please wear Traditional Attire. For the Wedding Ceremony (July 13), the dress code is Formal / Black Tie Optional.",
+      question: "Is there a dress code for the wedding?",
+      answer: "Asoebi fabric, Aso Oke Headtie/Fila is available. If you wish to partake in the colour scheme by wearing traditional aso ebi fabric please contact 07898375084. Colour of the day: Cream coloured outfit. We would appreciate if you partake in our colour scheme, but if you do not own the colour for the day, please do not worry at all! Just dress to impress! 😍",
     },
     {
-      question: "Where should I stay?",
-      answer: "We have arranged special rates at the Grand Hotel Lagos and Victoria Suites. Please mention the Awopetu-Ralph wedding when booking. Both hotels are within 15 minutes of our venues.",
+      question: "What is the schedule for the wedding day?",
+      answer: "Our Wedding is on Saturday 21st March 2026. The ceremony will promptly start from 11:00am and we aim to end the after party before 11:00pm.",
     },
     {
-      question: "Will transportation be provided?",
-      answer: "Yes, we will have shuttle services running between the recommended hotels and both venues. The shuttle schedule will be shared closer to the event dates.",
+      question: "When should I RSVP by?",
+      answer: "To help us with our planning, please RSVP as soon as possible. However, we would appreciate if this is done by 28th February 2026.",
     },
     {
-      question: "Can I bring a plus one?",
-      answer: "If your invitation includes 'and guest,' you are welcome to bring a plus one. Please include their information when you RSVP.",
+      question: "When should I arrive to the ceremony?",
+      answer: "You should aim to arrive at least 15 minutes before the ceremony starts. This gives you plenty of time to find a seat, settle in, and avoid any last-minute disruptions. Arriving any later could risk missing the start of the ceremony or interrupting key moments. It's always better to be early than to rush and potentially miss out!",
     },
     {
-      question: "Is there parking available at the venues?",
-      answer: "Yes, both venues have ample parking available. Valet service will also be provided at the Wedding Ceremony venue.",
+      question: "Are Children Welcome?",
+      answer: "As much as we love your little ones, our wedding is exclusively for adults. Thank you for understanding 😊.",
     },
     {
-      question: "What time should I arrive?",
-      answer: "Please plan to arrive 15-20 minutes before the ceremony start time to allow for parking and seating.",
+      question: "Is there a parking area at the venue?",
+      answer: "Yes, there is plenty of free parking available at the venue.",
     },
     {
-      question: "Will there be vegetarian/vegan meal options?",
-      answer: "Absolutely! We will have vegetarian and vegan options available. Please indicate your dietary preferences in your RSVP.",
+      question: "Do you have a gift preference?",
+      answer: "We will be very thankful for any gift that we receive. Also, monetary gift would be greatly appreciated.",
     },
     {
-      question: "Can I take photos during the ceremony?",
-      answer: "We kindly ask that you enjoy an unplugged ceremony. Our professional photographers will capture all the special moments. You're welcome to take photos during the reception!",
+      question: "Is it okay to take pictures with our phones and cameras during the wedding?",
+      answer: "Yes! We would love for you to take photos and share them with us. However, please don't block the walkway during dance entrance and be conscious of the photographers and videographers.",
     },
     {
-      question: "What if I have food allergies?",
-      answer: "Please let us know about any food allergies or dietary restrictions in your RSVP, and we will ensure appropriate accommodations are made.",
+      question: "Can I bring a date?",
+      answer: "Please only bring a plus one if this has been confirmed with the Bride and Groom or their Parents. Seating will be allocated to ensure guests feel comfortable and have their own seats. We hope you understand 😊.",
     },
     {
-      question: "Will the events be outdoors or indoors?",
-      answer: "The Traditional Engagement will be held outdoors (weather permitting, with indoor backup). The Wedding Ceremony and Reception will be held indoors.",
+      question: "Can I cancel my RSVP?",
+      answer: "If your plans have changed and you are unable to attend after previously confirming, please tell us as soon as possible. This will allow us to accommodate other guests and make any necessary adjustments.",
     },
   ];
 
@@ -57,7 +57,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to know about our special day
+            For all our friends and family who have questions, please check out our Q & A
           </p>
         </div>
 
@@ -80,15 +80,6 @@ export function FAQSection() {
             </AccordionItem>
           ))}
         </Accordion>
-
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            Have more questions?{" "}
-            <a href="mailto:wedding@example.com" className="text-primary hover:underline font-medium">
-              Contact us
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );

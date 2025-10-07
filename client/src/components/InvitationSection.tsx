@@ -7,12 +7,12 @@ export function InvitationSection() {
     {
       name: "Wedding Ceremony",
       date: "March 21, 2026",
-      time: "3:00 PM",
+      time: "11:00 AM",
       venue: "Kirkleatham Walled Garden",
       address: "Plantation Road, Redcar, TS10 4QT",
       locationDetails: "Located just off the A174/B1269 roundabout. The nearest train station is Redcar Central.",
       mapUrl: "https://maps.google.com/?q=Kirkleatham+Walled+Garden+Plantation+Road+Redcar+TS10+4QT",
-      dressCode: "Formal / Black Tie Optional",
+      dressCode: "Cream coloured outfit / Asoebi fabric available",
       theme: "Elegant Romance",
     },
   ];

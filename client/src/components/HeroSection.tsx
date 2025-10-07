@@ -13,7 +13,7 @@ export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const weddingDate = new Date("2026-03-21T15:00:00");
+    const weddingDate = new Date("2026-03-21T11:00:00");
 
     const calculateTimeLeft = () => {
       const now = new Date();
