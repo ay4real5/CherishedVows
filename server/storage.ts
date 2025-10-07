@@ -98,6 +98,14 @@ export class MemStorage implements IStorage {
         story: "My name is Damilare but people call me Dre. I am very very lively and chilled. I am a close friend to the groom. I've known the couple since Uni days and I wish them a home filled with love and happiness.",
         relationTo: "groom",
       },
+      {
+        name: "Ayo",
+        role: "groomsman",
+        title: "Groomsman",
+        photoUrl: "/attached_assets/ayopiipi_1759830275007.jpg",
+        story: "Ayo",
+        relationTo: "groom",
+      },
     ];
 
     members.forEach(member => {
