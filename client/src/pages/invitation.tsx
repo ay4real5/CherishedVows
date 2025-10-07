@@ -1,11 +1,14 @@
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import backgroundImage from "@assets/image_1759834063243.png";
 
-interface InvitationCardProps {
-  onEnter: () => void;
-}
+export default function Invitation() {
+  const [, setLocation] = useLocation();
 
-export function InvitationCard({ onEnter }: InvitationCardProps) {
+  const handleEnter = () => {
+    setLocation("/home");
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
       {/* Background with the invitation design */}
@@ -68,7 +71,7 @@ export function InvitationCard({ onEnter }: InvitationCardProps) {
           </p>
           
           <Button
-            onClick={onEnter}
+            onClick={handleEnter}
             size="lg"
             className="px-12 py-6 text-lg font-serif"
             data-testid="button-enter-website"
