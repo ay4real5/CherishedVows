@@ -58,6 +58,14 @@ export class MemStorage implements IStorage {
         story: "Hiiyyyyyyaaaaa😘😘😘 My name is Oyebimpe, but everyone calls me Bibi. the bride's best girl and favorite person to argue with. 😜 We met at work ,and from day one, we've been the definition of love and war ,and between all the laughter, eye rolls, and \"don't talk to me\" moments, a beautiful friendship was born. Through it all, she's my sister at heart, and I couldn't be prouder to see her marry the love of her life! 💕",
         relationTo: "bride",
       },
+      {
+        name: "Kofoworola Rabiu",
+        role: "bridesmaid",
+        title: "Bride's Cousin",
+        photoUrl: "/attached_assets/kofo_1759828085583.jpg",
+        story: "My Name is Kofoworola Rabiu, I'm 27 and I'm yemisi cousin",
+        relationTo: "bride",
+      },
     ];
 
     members.forEach(member => {
