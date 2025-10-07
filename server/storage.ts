@@ -74,6 +74,14 @@ export class MemStorage implements IStorage {
         story: "Hi, I'm Bimpe to family and friends — Bimpizzle on social media! I'm an introverted fashionista who loves to travel and has a favorite color that's the perfect combo of black and white. Growing up with the beautiful bride as little cousins to now watching her step into this new chapter is such a full-circle moment, and I'm so honored to be part of it!",
         relationTo: "bride",
       },
+      {
+        name: "Hameedah",
+        role: "bridesmaid",
+        title: "Chief Bridesmaid",
+        photoUrl: "/attached_assets/hameda_1759829493052.jpg",
+        story: "Hi! My name is Hameedah, I am a lawyer and I live and work in Manchester. I am the bride's cousin and her chief bridesmaid. I wish Yemisi and Bisoye unlimited happiness and a very very happy marriage blessed with all the good things ❤️",
+        relationTo: "bride",
+      },
     ];
 
     members.forEach(member => {
