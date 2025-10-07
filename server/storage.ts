@@ -106,6 +106,14 @@ export class MemStorage implements IStorage {
         story: "Ayo",
         relationTo: "groom",
       },
+      {
+        name: "Yinka",
+        role: "groomsman",
+        title: "Groomsman",
+        photoUrl: "/attached_assets/6754765r76374_1759830696151.jpg",
+        story: "Yinka",
+        relationTo: "groom",
+      },
     ];
 
     members.forEach(member => {
