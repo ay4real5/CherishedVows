@@ -82,7 +82,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center space-y-2">
           <p className="text-muted-foreground">
-            © {currentYear} Yemisi & Bisoye. All rights reserved.
+            © {currentYear} Yemisi & Abisoye. All rights reserved.
           </p>
           <p className="text-muted-foreground flex items-center justify-center gap-2">
             Made with <Heart className="w-4 h-4 text-primary fill-current" /> for our special day

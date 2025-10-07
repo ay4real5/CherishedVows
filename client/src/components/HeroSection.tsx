@@ -62,9 +62,12 @@ export function HeroSection() {
             Yemisi
           </h1>
           <div className="font-script text-6xl md:text-8xl text-primary mb-6 animate-float">&</div>
-          <h1 className="font-serif text-7xl md:text-9xl font-bold mb-12 text-white animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Bisoye
+          <h1 className="font-serif text-7xl md:text-9xl font-bold mb-8 text-white animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            Abisoye
           </h1>
+          <p className="text-xl md:text-2xl text-primary font-semibold tracking-wide animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            #AbifoundhisMis
+          </p>
         </div>
 
         {/* Decorative divider */}

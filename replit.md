@@ -1,8 +1,8 @@
-# Wedding Website - Yemisi & Bisoye
+# Wedding Website - Yemisi & Abisoye
 
 ## Overview
 
-A romantic, elegant wedding website for Yemisi and Bisoye featuring event details, RSVP management, photo gallery, digital guestbook, and bridal party showcases. The application provides an emotionally engaging digital celebration platform with password-protected access and modern interactive features.
+A romantic, elegant wedding website for Yemisi and Abisoye featuring event details, RSVP management, photo gallery, digital guestbook, and bridal party showcases. The application provides an emotionally engaging digital celebration platform with password-protected access and modern interactive features.
 
 **Wedding Details:**
 - Date: Saturday 21st March 2026 at 3:00 PM

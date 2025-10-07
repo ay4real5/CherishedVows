@@ -11,14 +11,14 @@ import photo7 from "@assets/IMG_4942_1759826058172.jpeg";
 import photo8 from "@assets/IMG_0355_1759826058173.jpeg";
 
 const couplePhotos = [
-  { id: 1, src: photo1, alt: "Yemisi & Bisoye - Photo 1" },
-  { id: 2, src: photo2, alt: "Yemisi & Bisoye - Photo 2" },
-  { id: 3, src: photo3, alt: "Yemisi & Bisoye - Photo 3" },
-  { id: 4, src: photo4, alt: "Yemisi & Bisoye - Photo 4" },
-  { id: 5, src: photo5, alt: "Yemisi & Bisoye - Photo 5" },
-  { id: 6, src: photo6, alt: "Yemisi & Bisoye - Photo 6" },
-  { id: 7, src: photo7, alt: "Yemisi & Bisoye - Photo 7" },
-  { id: 8, src: photo8, alt: "Yemisi & Bisoye - Photo 8" },
+  { id: 1, src: photo1, alt: "Yemisi & Abisoye - Photo 1" },
+  { id: 2, src: photo2, alt: "Yemisi & Abisoye - Photo 2" },
+  { id: 3, src: photo3, alt: "Yemisi & Abisoye - Photo 3" },
+  { id: 4, src: photo4, alt: "Yemisi & Abisoye - Photo 4" },
+  { id: 5, src: photo5, alt: "Yemisi & Abisoye - Photo 5" },
+  { id: 6, src: photo6, alt: "Yemisi & Abisoye - Photo 6" },
+  { id: 7, src: photo7, alt: "Yemisi & Abisoye - Photo 7" },
+  { id: 8, src: photo8, alt: "Yemisi & Abisoye - Photo 8" },
 ];
 
 export function CouplePhotosSection() {
