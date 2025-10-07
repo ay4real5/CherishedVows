@@ -51,31 +51,11 @@ export class MemStorage implements IStorage {
   private seedBridalParty() {
     const members: InsertBridalPartyMember[] = [
       {
-        name: "Michael Johnson",
-        role: "groomsman",
-        title: "Best Man",
-        story: "Michael has been Tambari's best friend since childhood. They grew up together, sharing countless adventures and creating memories that will last a lifetime.",
-        relationTo: "groom",
-      },
-      {
-        name: "David Smith",
-        role: "groomsman",
-        title: "Groomsman",
-        story: "David and Tambari met in university and quickly became inseparable. Their shared passion for sports and music has kept their friendship strong over the years.",
-        relationTo: "groom",
-      },
-      {
-        name: "Sarah Williams",
+        name: "Oyebimpe (Bibi)",
         role: "bridesmaid",
-        title: "Maid of Honor",
-        story: "Sarah has been Christiana's rock since their school days. Through thick and thin, their sisterhood has only grown stronger with each passing year.",
-        relationTo: "bride",
-      },
-      {
-        name: "Emily Brown",
-        role: "bridesmaid",
-        title: "Bridesmaid",
-        story: "Emily and Christiana became instant friends when they met at work. Their bond over shared interests and values has made Emily an irreplaceable part of Christiana's life.",
+        title: "Bride's Best Girl",
+        photoUrl: "/attached_assets/bimpe_1759827170279.jpg",
+        story: "Hiiyyyyyyaaaaa😘😘😘 My name is Oyebimpe, but everyone calls me Bibi. the bride's best girl and favorite person to argue with. 😜 We met at work ,and from day one, we've been the definition of love and war ,and between all the laughter, eye rolls, and \"don't talk to me\" moments, a beautiful friendship was born. Through it all, she's my sister at heart, and I couldn't be prouder to see her marry the love of her life! 💕",
         relationTo: "bride",
       },
     ];
