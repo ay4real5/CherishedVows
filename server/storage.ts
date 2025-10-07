@@ -66,6 +66,14 @@ export class MemStorage implements IStorage {
         story: "My Name is Kofoworola Rabiu, I'm 27 and I'm yemisi cousin",
         relationTo: "bride",
       },
+      {
+        name: "Bimpe (Bimpizzle)",
+        role: "bridesmaid",
+        title: "Bride's Cousin",
+        photoUrl: "/attached_assets/bimpizzle_1759829102989.jpg",
+        story: "Hi, I'm Bimpe to family and friends — Bimpizzle on social media! I'm an introverted fashionista who loves to travel and has a favorite color that's the perfect combo of black and white. Growing up with the beautiful bride as little cousins to now watching her step into this new chapter is such a full-circle moment, and I'm so honored to be part of it!",
+        relationTo: "bride",
+      },
     ];
 
     members.forEach(member => {
