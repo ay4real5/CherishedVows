@@ -90,6 +90,14 @@ export class MemStorage implements IStorage {
         story: "My name is Uju, and I'm a proud bridesmaid for Yemisi! We met in 2021 and became close friends while living together. Having shared those memories, it's a true joy to now celebrate this chapter with her and Bisoye whom I met around the same time. I'm so happy my girl found her soul mate and I wish them all the very best in their union.",
         relationTo: "bride",
       },
+      {
+        name: "Damilare (Dre)",
+        role: "groomsman",
+        title: "Groomsman",
+        photoUrl: "/attached_assets/damilare_1759830070988.jpg",
+        story: "My name is Damilare but people call me Dre. I am very very lively and chilled. I am a close friend to the groom. I've known the couple since Uni days and I wish them a home filled with love and happiness.",
+        relationTo: "groom",
+      },
     ];
 
     members.forEach(member => {
