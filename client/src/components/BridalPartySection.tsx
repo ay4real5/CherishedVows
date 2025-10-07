@@ -59,47 +59,53 @@ export function BridalPartySection() {
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {groomsmen.map((member) => (
-              <Card key={member.id} className="p-6 hover-elevate" data-testid={`card-groomsman-${member.id}`}>
-                <div className="flex items-center gap-4 mb-4">
-                  <Avatar className="w-20 h-20 border-2 border-primary">
-                    <AvatarImage src={member.photoUrl || undefined} alt={member.name} />
-                    <AvatarFallback className="text-lg bg-primary text-primary-foreground">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="font-serif text-xl font-bold text-foreground">
-                      {member.name}
-                    </h4>
-                    <p className="text-primary font-medium">{member.title}</p>
+              <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-groomsman-${member.id}`}>
+                {/* Large Photo Section */}
+                {member.photoUrl && (
+                  <div className="relative h-80 w-full overflow-hidden">
+                    <img
+                      src={member.photoUrl}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h4 className="font-serif text-2xl font-bold mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-accent font-medium text-lg">{member.title}</p>
+                    </div>
                   </div>
-                </div>
+                )}
                 
-                <div className={`overflow-hidden transition-all ${
-                  expandedId === member.id ? 'max-h-96' : 'max-h-20'
-                }`}>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {member.story}
-                  </p>
-                </div>
+                {/* Story Section */}
+                <div className="p-6">
+                  <div className={`overflow-hidden transition-all ${
+                    expandedId === member.id ? 'max-h-96' : 'max-h-24'
+                  }`}>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {member.story}
+                    </p>
+                  </div>
 
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setExpandedId(expandedId === member.id ? null : member.id)}
-                  className="mt-4 w-full"
-                  data-testid={`button-expand-${member.id}`}
-                >
-                  {expandedId === member.id ? (
-                    <>
-                      Show Less <ChevronUp className="ml-2 w-4 h-4" />
-                    </>
-                  ) : (
-                    <>
-                      Read Story <ChevronDown className="ml-2 w-4 h-4" />
-                    </>
-                  )}
-                </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setExpandedId(expandedId === member.id ? null : member.id)}
+                    className="mt-4 w-full"
+                    data-testid={`button-expand-${member.id}`}
+                  >
+                    {expandedId === member.id ? (
+                      <>
+                        Show Less <ChevronUp className="ml-2 w-4 h-4" />
+                      </>
+                    ) : (
+                      <>
+                        Read Full Story <ChevronDown className="ml-2 w-4 h-4" />
+                      </>
+                    )}
+                  </Button>
+                </div>
               </Card>
             ))}
           </div>
@@ -112,47 +118,53 @@ export function BridalPartySection() {
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {bridesmaids.map((member) => (
-              <Card key={member.id} className="p-6 hover-elevate" data-testid={`card-bridesmaid-${member.id}`}>
-                <div className="flex items-center gap-4 mb-4">
-                  <Avatar className="w-20 h-20 border-2 border-primary">
-                    <AvatarImage src={member.photoUrl || undefined} alt={member.name} />
-                    <AvatarFallback className="text-lg bg-primary text-primary-foreground">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="font-serif text-xl font-bold text-foreground">
-                      {member.name}
-                    </h4>
-                    <p className="text-primary font-medium">{member.title}</p>
+              <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-bridesmaid-${member.id}`}>
+                {/* Large Photo Section */}
+                {member.photoUrl && (
+                  <div className="relative h-80 w-full overflow-hidden">
+                    <img
+                      src={member.photoUrl}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h4 className="font-serif text-2xl font-bold mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-accent font-medium text-lg">{member.title}</p>
+                    </div>
                   </div>
-                </div>
+                )}
                 
-                <div className={`overflow-hidden transition-all ${
-                  expandedId === member.id ? 'max-h-96' : 'max-h-20'
-                }`}>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {member.story}
-                  </p>
-                </div>
+                {/* Story Section */}
+                <div className="p-6">
+                  <div className={`overflow-hidden transition-all ${
+                    expandedId === member.id ? 'max-h-96' : 'max-h-24'
+                  }`}>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {member.story}
+                    </p>
+                  </div>
 
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setExpandedId(expandedId === member.id ? null : member.id)}
-                  className="mt-4 w-full"
-                  data-testid={`button-expand-${member.id}`}
-                >
-                  {expandedId === member.id ? (
-                    <>
-                      Show Less <ChevronUp className="ml-2 w-4 h-4" />
-                    </>
-                  ) : (
-                    <>
-                      Read Story <ChevronDown className="ml-2 w-4 h-4" />
-                    </>
-                  )}
-                </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setExpandedId(expandedId === member.id ? null : member.id)}
+                    className="mt-4 w-full"
+                    data-testid={`button-expand-${member.id}`}
+                  >
+                    {expandedId === member.id ? (
+                      <>
+                        Show Less <ChevronUp className="ml-2 w-4 h-4" />
+                      </>
+                    ) : (
+                      <>
+                        Read Full Story <ChevronDown className="ml-2 w-4 h-4" />
+                      </>
+                    )}
+                  </Button>
+                </div>
               </Card>
             ))}
           </div>
