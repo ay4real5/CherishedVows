@@ -31,89 +31,89 @@ export default function Invitation() {
       </div>
 
       {/* Main Content Card */}
-      <div className="relative z-10 text-center px-8 max-w-5xl mx-auto">
-        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-primary/20 p-12 md:p-16 space-y-10 animate-fade-in">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto w-full">
+        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-primary/20 p-6 md:p-10 space-y-6 animate-fade-in max-h-[90vh] overflow-y-auto">
           
           {/* Top Decorative Element */}
-          <div className="flex items-center justify-center mb-6">
-            <div className="h-px w-20 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-            <div className="mx-4">
-              <Heart className="w-6 h-6 text-primary fill-primary animate-pulse" />
+          <div className="flex items-center justify-center">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            <div className="mx-3">
+              <Heart className="w-5 h-5 text-primary fill-primary animate-pulse" />
             </div>
-            <div className="h-px w-20 bg-gradient-to-l from-transparent via-primary to-transparent"></div>
+            <div className="h-px w-16 bg-gradient-to-l from-transparent via-primary to-transparent"></div>
           </div>
 
           {/* Invitation Text */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <p className="text-lg md:text-xl text-muted-foreground font-serif tracking-wide italic">
+            <p className="text-base md:text-lg text-muted-foreground font-serif tracking-wide italic">
               You are invited to the wedding of
             </p>
           </div>
           
           {/* Couple Names */}
-          <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <h1 className="font-serif text-7xl md:text-9xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-shimmer">
+          <div className="space-y-3 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-primary">
               Yemisi
             </h1>
             <div className="flex items-center justify-center">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
-              <div className="font-script text-6xl md:text-8xl text-primary mx-4 animate-float">&</div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary"></div>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
+              <div className="font-script text-4xl md:text-6xl text-primary mx-3 animate-float">&</div>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
             </div>
-            <h1 className="font-serif text-7xl md:text-9xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-shimmer" style={{ animationDelay: '0.5s' }}>
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-primary">
               Abisoye
             </h1>
           </div>
 
           {/* Hashtag */}
           <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-            <p className="text-2xl md:text-3xl text-primary font-bold tracking-wide">
+            <p className="text-xl md:text-2xl text-primary font-bold tracking-wide">
               #AbifoundhisMis
             </p>
           </div>
 
           {/* Divider */}
-          <div className="flex items-center justify-center my-8">
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
-            <div className="h-px w-32 bg-gradient-to-r from-primary/50 via-primary to-primary/50 mx-4"></div>
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+          <div className="flex items-center justify-center my-4">
+            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+            <div className="h-px w-24 bg-gradient-to-r from-primary/50 via-primary to-primary/50 mx-3"></div>
+            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
           </div>
 
           {/* Wedding Details */}
-          <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <p className="text-2xl md:text-3xl font-serif font-bold text-foreground">
+          <div className="space-y-2 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+            <p className="text-xl md:text-2xl font-serif font-bold text-foreground">
               Wedding Ceremony
             </p>
-            <p className="text-3xl md:text-4xl font-serif font-bold text-primary tracking-wider">
+            <p className="text-2xl md:text-3xl font-serif font-bold text-primary tracking-wider">
               21 . 03 . 2026
             </p>
           </div>
 
           {/* Call to Action */}
-          <div className="space-y-6 pt-6 animate-slide-up" style={{ animationDelay: '1s' }}>
-            <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-widest">
+          <div className="space-y-4 pt-4 animate-slide-up" style={{ animationDelay: '1s' }}>
+            <p className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-widest">
               All details are available on our website
             </p>
             
             <Button
               onClick={handleEnter}
               size="lg"
-              className="px-16 py-7 text-lg font-serif shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary"
+              className="px-12 py-6 text-base md:text-lg font-serif shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary"
               data-testid="button-enter-website"
             >
-              <Sparkles className="w-5 h-5 mr-2 animate-pulse" />
+              <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
               Click Here to Go to Our Wedding Website
-              <Sparkles className="w-5 h-5 ml-2 animate-pulse" />
+              <Sparkles className="w-4 h-4 ml-2 animate-pulse" />
             </Button>
           </div>
 
           {/* Bottom Decorative Element */}
-          <div className="flex items-center justify-center mt-8">
-            <div className="h-px w-20 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-            <div className="mx-4">
-              <Heart className="w-6 h-6 text-primary fill-primary animate-pulse" />
+          <div className="flex items-center justify-center mt-6">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            <div className="mx-3">
+              <Heart className="w-5 h-5 text-primary fill-primary animate-pulse" />
             </div>
-            <div className="h-px w-20 bg-gradient-to-l from-transparent via-primary to-transparent"></div>
+            <div className="h-px w-16 bg-gradient-to-l from-transparent via-primary to-transparent"></div>
           </div>
         </div>
       </div>
