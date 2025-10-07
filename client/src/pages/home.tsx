@@ -3,6 +3,7 @@ import { PasswordGate } from "@/components/PasswordGate";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { InvitationSection } from "@/components/InvitationSection";
+import { CouplePhotosSection } from "@/components/CouplePhotosSection";
 import { OurStorySection } from "@/components/OurStorySection";
 import { BridalPartySection } from "@/components/BridalPartySection";
 import { RsvpForm } from "@/components/RsvpForm";
@@ -34,6 +35,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <InvitationSection />
+        <CouplePhotosSection />
         <OurStorySection />
         <BridalPartySection />
         <RsvpForm />

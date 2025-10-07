@@ -1,8 +1,14 @@
-# Wedding Website - Christiana & Tambari
+# Wedding Website - Yemisi & Bisoye
 
 ## Overview
 
-A romantic, elegant wedding website for Christiana and Tambari featuring event details, RSVP management, photo gallery, digital guestbook, and bridal party showcases. The application provides an emotionally engaging digital celebration platform with password-protected access and modern interactive features.
+A romantic, elegant wedding website for Yemisi and Bisoye featuring event details, RSVP management, photo gallery, digital guestbook, and bridal party showcases. The application provides an emotionally engaging digital celebration platform with password-protected access and modern interactive features.
+
+**Wedding Details:**
+- Date: Saturday 21st March 2026 at 3:00 PM
+- Venue: Kirkleatham Walled Garden, Plantation Road, Redcar, TS10 4QT
+- Location: Just off the A174/B1269 roundabout, nearest station is Redcar Central
+- Color scheme: Teal (primary), Gold/Amber (secondary), Orange (accent)
 
 ## User Preferences
 
@@ -25,18 +31,20 @@ Preferred communication style: Simple, everyday language.
 **UI Component System**
 - Shadcn/ui components built on Radix UI primitives for accessible, customizable UI
 - Tailwind CSS for utility-first styling with custom design tokens
-- Custom theme system with wedding-specific color palettes (Champagne, Rose Gold, Ivory, Deep Plum)
+- Custom theme system with wedding-specific color palettes (Teal, Gold/Amber, Orange)
 - Typography hierarchy using Google Fonts: Playfair Display (serif), Inter (sans-serif), Great Vibes (script)
 
 **Key Features**
 - Password-gated access with session-based authentication
+- Active countdown timer to March 21, 2026 (wedding date)
+- Couple's photo gallery featuring 8 professional photos with masonry layout
 - Multi-step RSVP form with validation
-- Photo gallery with upload capabilities via Uppy
+- User photo gallery with upload capabilities via Uppy
 - Digital guestbook with message posting and reactions
 - Bridal party member profiles with expandable stories
 - FAQ accordion section
-- Countdown timer to wedding date
 - Responsive design with mobile-first approach
+- Elegant animations (fade-in, slide-up, float, pulse-glow, shimmer)
 
 ### Backend Architecture
 

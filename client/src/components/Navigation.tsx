@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Invitation", href: "#invitation" },
+  { label: "Photos", href: "#our-photos" },
   { label: "Our Story", href: "#story" },
   { label: "Bridal Party", href: "#bridal-party" },
   { label: "RSVP", href: "#rsvp" },
@@ -32,7 +33,7 @@ export function Navigation() {
             className="font-script text-2xl text-primary hover-elevate px-3 py-1 rounded-md"
             data-testid="link-home"
           >
-            C & T
+            Y & B
           </button>
 
           {/* Desktop Navigation */}
