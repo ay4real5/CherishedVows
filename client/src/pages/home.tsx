@@ -17,16 +17,11 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   const [showInvitation, setShowInvitation] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const auth = sessionStorage.getItem("wedding_authenticated");
     const hasSeenInvitation = sessionStorage.getItem("wedding_invitation_seen");
     
-    if (auth === "true") {
-      setIsAuthenticated(true);
-      setShowInvitation(false);
-    } else if (hasSeenInvitation === "true") {
+    if (hasSeenInvitation === "true") {
       setShowInvitation(false);
     }
   }, []);
@@ -38,10 +33,6 @@ export default function Home() {
 
   if (showInvitation) {
     return <InvitationCard onEnter={handleEnterWebsite} />;
-  }
-
-  if (!isAuthenticated) {
-    return <PasswordGate onUnlock={() => setIsAuthenticated(true)} />;
   }
 
   return (
