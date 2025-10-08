@@ -63,7 +63,7 @@ export class MemStorage implements IStorage {
         role: "bridesmaid",
         title: "Bride's Cousin",
         photoUrl: "/attached_assets/kofo_1759828085583.jpg",
-        story: "My Name is Kofoworola Rabiu, I'm 27 and I'm yemisi cousin",
+        story: "My name is Kofoworola Rabiu, I am the brides cousin. I'm related to her through my mum's side of the family. I live in London, I work in Tech and my favorite hobby is eating and minding my business",
         relationTo: "bride",
       },
       {
@@ -103,7 +103,7 @@ export class MemStorage implements IStorage {
         role: "groomsman",
         title: "Groomsman",
         photoUrl: "/attached_assets/ayopiipi_1759830275007.jpg",
-        story: "Ayo",
+        story: "My name is Ayo ,Bisoye is an excellent friend and one of my favorite teammates, both in life and on the PS5! I've known him since 2021, when we were both students at Teesside University. We quickly bonded over countless hours playing. He's the guy who's always up for a challenging match and always ready to celebrate. Bisoye and Yemisi have been great friends to both me and Uju over the years. We couldn't imagine celebrating this day without him standing by her side. We're so incredibly happy to celebrate their union",
         relationTo: "groom",
       },
       {
