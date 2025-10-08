@@ -122,6 +122,14 @@ export class MemStorage implements IStorage {
         story: "My name is Ridwan, but everyone calls me Rio. I'm a friend of Yemisi and Abisoye. I'm really happy to be part of your special day and can't wait to celebrate with you both! Warm regards, Rio.",
         relationTo: "groom",
       },
+      {
+        name: "Taiwo",
+        role: "groomsman",
+        title: "Groom's Brother",
+        photoUrl: "/attached_assets/taiwo_1759927004175.jpg",
+        story: "I'm Taiwo, the younger brother of the groom. An extroverted introvert who's very adventurous and enjoys learning new things. I'm proud of the groom's growth and accomplishments over the years. It's an honor to be a part of this wonderful celebration as the bride and groom embark on this new journey. Cheers to love, laughter, and a happily ever after",
+        relationTo: "groom",
+      },
     ];
 
     members.forEach(member => {
