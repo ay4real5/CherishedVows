@@ -58,8 +58,12 @@ export function BridalPartySection() {
             Groomsmen
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
-            {groomsmen.map((member) => (
-              <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-groomsman-${member.id}`}>
+            {groomsmen.map((member, index) => (
+              <Card key={member.id} className={`overflow-hidden hover-elevate ${
+                index === groomsmen.length - 1 && groomsmen.length % 2 !== 0 
+                  ? 'md:col-span-2 md:mx-auto md:max-w-md' 
+                  : ''
+              }`} data-testid={`card-groomsman-${member.id}`}>
                 {/* Large Photo Section */}
                 {member.photoUrl && (
                   <div className="relative h-80 w-full overflow-hidden bg-muted">
@@ -117,8 +121,12 @@ export function BridalPartySection() {
             Bridesmaids
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
-            {bridesmaids.map((member) => (
-              <Card key={member.id} className="overflow-hidden hover-elevate" data-testid={`card-bridesmaid-${member.id}`}>
+            {bridesmaids.map((member, index) => (
+              <Card key={member.id} className={`overflow-hidden hover-elevate ${
+                index === bridesmaids.length - 1 && bridesmaids.length % 2 !== 0 
+                  ? 'md:col-span-2 md:mx-auto md:max-w-md' 
+                  : ''
+              }`} data-testid={`card-bridesmaid-${member.id}`}>
                 {/* Large Photo Section */}
                 {member.photoUrl && (
                   <div className="relative h-80 w-full overflow-hidden bg-muted">
