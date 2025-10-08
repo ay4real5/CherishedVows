@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-script text-3xl text-primary mb-4">Y & B</h3>
+            <h3 className="font-script text-3xl text-primary mb-4">Y & A</h3>
             <p className="text-muted-foreground leading-relaxed">
               Join us as we celebrate our love and commitment to each other on our special day.
             </p>

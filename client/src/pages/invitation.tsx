@@ -65,7 +65,7 @@ export default function Invitation() {
 
           {/* Hashtag */}
           <p className="text-base md:text-xl text-primary font-bold tracking-wide">
-            #AbifoundhisMis
+            #AbifoundhisMisi
           </p>
 
           {/* Divider */}

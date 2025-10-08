@@ -33,7 +33,7 @@ export function Navigation() {
             className="font-script text-2xl text-primary hover-elevate px-3 py-1 rounded-md"
             data-testid="link-home"
           >
-            Y & B
+            Y & A
           </button>
 
           {/* Desktop Navigation */}

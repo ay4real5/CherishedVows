@@ -66,7 +66,7 @@ export function HeroSection() {
             Abisoye
           </h1>
           <p className="text-xl md:text-2xl text-primary font-semibold tracking-wide animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            #AbifoundhisMis
+            #AbifoundhisMisi
           </p>
         </div>
 
