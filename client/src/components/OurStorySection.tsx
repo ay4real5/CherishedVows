@@ -31,7 +31,7 @@ export function OurStorySection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 relative">
+        <div className="grid md:grid-cols-2 gap-12 relative items-stretch">
           {/* Center Heart Divider */}
           <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl animate-pulse-glow">
@@ -40,8 +40,8 @@ export function OurStorySection() {
           </div>
 
           {/* Left Side - Abisoye's Message */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <Card className="relative p-8 hover-elevate bg-gradient-to-br from-card to-card border-2 border-primary/20 shadow-xl">
+          <div className="animate-slide-up flex" style={{ animationDelay: '0.2s' }}>
+            <Card className="relative p-8 hover-elevate bg-gradient-to-br from-card to-card border-2 border-primary/20 shadow-xl flex-1">
               {/* Decorative Corner Elements */}
               <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-primary/30 rounded-tl-lg"></div>
               <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-primary/30 rounded-br-lg"></div>
@@ -79,8 +79,8 @@ export function OurStorySection() {
           </div>
 
           {/* Right Side - Yemisi's Message */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <Card className="relative p-8 hover-elevate bg-gradient-to-bl from-card to-card border-2 border-accent/20 shadow-xl">
+          <div className="animate-slide-up flex" style={{ animationDelay: '0.4s' }}>
+            <Card className="relative p-8 hover-elevate bg-gradient-to-bl from-card to-card border-2 border-accent/20 shadow-xl flex-1">
               {/* Decorative Corner Elements */}
               <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent/30 rounded-tr-lg"></div>
               <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/30 rounded-bl-lg"></div>
