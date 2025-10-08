@@ -2,42 +2,9 @@ import { Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export function OurStorySection() {
-  const milestones = [
-    {
-      date: "March 2020",
-      title: "First Meeting",
-      description: "Our paths crossed at a mutual friend's gathering, and we instantly connected over our shared love for music and adventure.",
-      side: "left",
-    },
-    {
-      date: "August 2020",
-      title: "First Date",
-      description: "A simple coffee date turned into hours of conversation and laughter. We both knew this was something special.",
-      side: "right",
-    },
-    {
-      date: "December 2021",
-      title: "Relationship Official",
-      description: "After a year of growing closer, we made it official during a romantic beach sunset walk.",
-      side: "left",
-    },
-    {
-      date: "May 2023",
-      title: "The Proposal",
-      description: "Under the stars at our favorite restaurant, Tambari got down on one knee and asked the question that changed our lives forever.",
-      side: "right",
-    },
-    {
-      date: "July 2024",
-      title: "Forever Begins",
-      description: "And now we're getting married! Join us as we celebrate the beginning of our forever.",
-      side: "left",
-    },
-  ];
-
   return (
     <section id="story" className="py-20 md:py-32 bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our Love Story
@@ -47,46 +14,55 @@ export function OurStorySection() {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
-
-          <div className="space-y-12">
-            {milestones.map((milestone, index) => (
-              <div
-                key={index}
-                className={`relative flex items-center ${
-                  milestone.side === "left" ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-col`}
-                data-testid={`milestone-${index}`}
-              >
-                {/* Content Card */}
-                <div className="w-full md:w-5/12">
-                  <Card className={`p-6 hover-elevate ${
-                    milestone.side === "left" ? "md:mr-auto" : "md:ml-auto"
-                  }`}>
-                    <div className="text-sm font-semibold text-primary mb-2">
-                      {milestone.date}
-                    </div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {milestone.description}
-                    </p>
-                  </Card>
-                </div>
-
-                {/* Heart Icon (center) */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center z-10">
-                  <Heart className="w-6 h-6 text-primary-foreground fill-current" />
-                </div>
-
-                {/* Spacer for the other side */}
-                <div className="w-full md:w-5/12" />
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Left Side - Abisoye's Message */}
+          <Card className="p-8 hover-elevate">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <Heart className="w-8 h-8 text-primary fill-current" />
               </div>
-            ))}
-          </div>
+            </div>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-center text-foreground mb-6">
+              From Abisoye
+            </h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Aduki and I have been through many ups and downs, and each one has only made us stronger, closer, and more certain of what we share.
+              </p>
+              <p>
+                She's an incredibly good person, smart, ambitious and focused.
+              </p>
+              <p>
+                With her, life feels fuller, brighter, and more beautiful than I ever imagined. I don't just want to spend my days with her, I want to grow, laugh, dream, and face everything together. She is my heart, my home, and my forever.
+              </p>
+            </div>
+          </Card>
+
+          {/* Right Side - Yemisi's Message */}
+          <Card className="p-8 hover-elevate">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <Heart className="w-8 h-8 text-primary fill-current" />
+              </div>
+            </div>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-center text-foreground mb-6">
+              From Yemisi
+            </h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Abisoye Mi, my amazing man, the man that gives me butterflies.
+              </p>
+              <p>
+                Abisoye has shown me the importance of having a loving relationship. Over the years our love has grown into something truly special. I have discovered that the best part of life is simply being by his side.
+              </p>
+              <p>
+                Abiskoko is the most incredible man I have ever met, he is the definition of strong, generous and kind. In him I found a love that is more than I ever dreamt possible
+              </p>
+              <p>
+                It's you and me today, tomorrow and forever 😊
+              </p>
+            </div>
+          </Card>
         </div>
 
         <div className="text-center mt-16">
