@@ -37,7 +37,7 @@ export function FAQSection() {
     },
     {
       question: "Is it okay to take pictures with our phones and cameras during the wedding?",
-      answer: "Yes! We would love for you to take photos and share them with us. However, please don't block the walkway during dance entrance and be conscious of the photographers and videographers.",
+      answer: "Yes! We would love for you to take photos and share them with us. However, please don't block the walkway during dance entrance and be conscious of the photographers and videographers. If uploading your pictures on social media, can we please ask you tag us with #AbifoundhisMisi #AbifoundhisMisi26",
     },
     {
       question: "Can I bring a date?",

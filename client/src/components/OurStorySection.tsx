@@ -43,7 +43,7 @@ export function OurStorySection() {
             Our Love Story
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Every love story is beautiful, but ours is our favorite
+            Our story isn't perfect, but it's perfectly ours.
           </p>
         </div>
 
