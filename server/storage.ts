@@ -130,6 +130,14 @@ export class MemStorage implements IStorage {
         story: "I'm Taiwo, the younger brother of the groom. An extroverted introvert who's very adventurous and enjoys learning new things. I'm proud of the groom's growth and accomplishments over the years. It's an honor to be a part of this wonderful celebration as the bride and groom embark on this new journey. Cheers to love, laughter, and a happily ever after",
         relationTo: "groom",
       },
+      {
+        name: "Michael",
+        role: "groomsman",
+        title: "Groomsman",
+        photoUrl: "/attached_assets/gft_1761491769783.jpg",
+        story: "My name is Michael. I met Mr. Bisoye during his friend's wedding last year, and since then, we've grown to become very good friends more like brothers. It's truly an honour and a pleasure to stand by him as one of his groomsmen for his wedding.",
+        relationTo: "groom",
+      },
     ];
 
     members.forEach(member => {
