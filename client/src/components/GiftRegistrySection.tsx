@@ -54,8 +54,15 @@ export function GiftRegistrySection() {
               variant="default"
               className="w-full"
               data-testid="button-view-registry"
+              asChild
             >
-              View Registry
+              <a 
+                href="https://www.amazon.co.uk/wedding/registry/27TQPQLKJ0KST" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                View Registry
+              </a>
             </Button>
           </Card>
 
