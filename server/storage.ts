@@ -158,7 +158,15 @@ export class MemStorage implements IStorage {
 
     members.forEach(member => {
       const id = randomUUID();
-      this.bridalPartyMembers.set(id, { ...member, id });
+      this.bridalPartyMembers.set(id, { 
+        name: member.name,
+        role: member.role,
+        title: member.title,
+        photoUrl: member.photoUrl ?? null,
+        story: member.story,
+        relationTo: member.relationTo,
+        id 
+      });
     });
   }
 
@@ -198,14 +206,23 @@ export class MemStorage implements IStorage {
 
     milestones.forEach(milestone => {
       const id = randomUUID();
-      this.storyMilestones.set(id, { ...milestone, id });
+      this.storyMilestones.set(id, { 
+        date: milestone.date,
+        title: milestone.title,
+        description: milestone.description,
+        photoUrl: milestone.photoUrl ?? null,
+        order: milestone.order,
+        id 
+      });
     });
   }
 
   async createRsvp(insertRsvp: InsertRsvp): Promise<Rsvp> {
     const id = randomUUID();
     const rsvp: Rsvp = { 
-      ...insertRsvp, 
+      guestName: insertRsvp.guestName,
+      attending: insertRsvp.attending ?? false,
+      plusOneName: insertRsvp.plusOneName ?? null,
       id,
       createdAt: new Date(),
     };
@@ -223,7 +240,15 @@ export class MemStorage implements IStorage {
 
   async createBridalPartyMember(insertMember: InsertBridalPartyMember): Promise<BridalPartyMember> {
     const id = randomUUID();
-    const member: BridalPartyMember = { ...insertMember, id };
+    const member: BridalPartyMember = { 
+      name: insertMember.name,
+      role: insertMember.role,
+      title: insertMember.title,
+      photoUrl: insertMember.photoUrl ?? null,
+      story: insertMember.story,
+      relationTo: insertMember.relationTo,
+      id 
+    };
     this.bridalPartyMembers.set(id, member);
     return member;
   }
@@ -263,7 +288,10 @@ export class MemStorage implements IStorage {
   async createGalleryPhoto(insertPhoto: InsertGalleryPhoto): Promise<GalleryPhoto> {
     const id = randomUUID();
     const photo: GalleryPhoto = {
-      ...insertPhoto,
+      photoUrl: insertPhoto.photoUrl,
+      category: insertPhoto.category,
+      caption: insertPhoto.caption ?? null,
+      uploadedBy: insertPhoto.uploadedBy ?? null,
       id,
       createdAt: new Date(),
     };
@@ -287,7 +315,14 @@ export class MemStorage implements IStorage {
 
   async createStoryMilestone(insertMilestone: InsertStoryMilestone): Promise<StoryMilestone> {
     const id = randomUUID();
-    const milestone: StoryMilestone = { ...insertMilestone, id };
+    const milestone: StoryMilestone = { 
+      date: insertMilestone.date,
+      title: insertMilestone.title,
+      description: insertMilestone.description,
+      photoUrl: insertMilestone.photoUrl ?? null,
+      order: insertMilestone.order,
+      id 
+    };
     this.storyMilestones.set(id, milestone);
     return milestone;
   }
