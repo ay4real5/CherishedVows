@@ -9,7 +9,15 @@ export function FAQSection() {
   const faqs = [
     {
       question: "Is there a dress code for the wedding?",
-      answer: "Asoebi fabric, Aso Oke Headtie/Fila is available. If you wish to partake in the colour scheme by wearing traditional aso ebi fabric please contact 07898375084. Colour of the day: Cream coloured outfit. We would appreciate if you partake in our colour scheme, but if you do not own the colour for the day, please do not worry at all! Just dress to impress! 😍",
+      answer: (
+        <>
+          Asoebi fabric, Aso Oke Headtie/Fila is available. If you wish to partake in the colour scheme by wearing traditional aso ebi fabric please contact 07898375084.
+          <br /><br />
+          <strong>Colour of the day: Cream coloured outfit.</strong>
+          <br /><br />
+          We would appreciate if you partake in our colour scheme, but if you do not own the colour for the day, please do not worry at all! Just dress to impress! 😍
+        </>
+      ),
     },
     {
       question: "What is the schedule for the wedding day?",
