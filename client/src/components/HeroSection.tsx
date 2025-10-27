@@ -49,7 +49,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-8 max-w-7xl mx-auto">
+      <div className="relative z-10 text-center px-4 md:px-8 max-w-7xl mx-auto">
         {/* Decorative line */}
         <div className="flex items-center justify-center mb-8">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/50"></div>
@@ -58,14 +58,14 @@ export function HeroSection() {
         </div>
         
         <div className="mb-12">
-          <h1 className="font-serif text-7xl md:text-9xl font-bold mb-6 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-serif text-5xl md:text-9xl font-bold mb-6 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Yemisi
           </h1>
-          <div className="font-script text-6xl md:text-8xl text-primary mb-6 animate-float">&</div>
-          <h1 className="font-serif text-7xl md:text-9xl font-bold mb-8 text-white animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="font-script text-5xl md:text-8xl text-primary mb-6 animate-float">&</div>
+          <h1 className="font-serif text-5xl md:text-9xl font-bold mb-8 text-white animate-fade-in" style={{ animationDelay: '0.4s' }}>
             Abisoye
           </h1>
-          <p className="text-xl md:text-2xl text-primary font-semibold tracking-wide animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-lg md:text-2xl text-primary font-semibold tracking-wide animate-fade-in" style={{ animationDelay: '0.5s' }}>
             #AbifoundhisMisi
           </p>
         </div>
@@ -85,33 +85,33 @@ export function HeroSection() {
         </div>
 
         {/* Countdown Timer */}
-        <div className="flex justify-center gap-4 md:gap-8 mb-16 animate-slide-up" style={{ animationDelay: '0.8s' }} data-testid="countdown-timer">
+        <div className="flex justify-center gap-2 md:gap-8 mb-16 animate-slide-up" style={{ animationDelay: '0.8s' }} data-testid="countdown-timer">
           <div className="text-center group">
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 min-w-[90px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl"></div>
-              <div className="relative text-4xl md:text-6xl font-bold text-white font-serif">{timeLeft.days}</div>
-              <div className="relative text-xs md:text-sm text-white/80 mt-2 uppercase tracking-wider">Days</div>
+            <div className="relative bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl md:rounded-2xl"></div>
+              <div className="relative text-3xl md:text-6xl font-bold text-white font-serif">{timeLeft.days}</div>
+              <div className="relative text-[10px] md:text-sm text-white/80 mt-1 md:mt-2 uppercase tracking-wider">Days</div>
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 min-w-[90px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl"></div>
-              <div className="relative text-4xl md:text-6xl font-bold text-white font-serif">{timeLeft.hours}</div>
-              <div className="relative text-xs md:text-sm text-white/80 mt-2 uppercase tracking-wider">Hours</div>
+            <div className="relative bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl md:rounded-2xl"></div>
+              <div className="relative text-3xl md:text-6xl font-bold text-white font-serif">{timeLeft.hours}</div>
+              <div className="relative text-[10px] md:text-sm text-white/80 mt-1 md:mt-2 uppercase tracking-wider">Hours</div>
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 min-w-[90px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl"></div>
-              <div className="relative text-4xl md:text-6xl font-bold text-white font-serif">{timeLeft.minutes}</div>
-              <div className="relative text-xs md:text-sm text-white/80 mt-2 uppercase tracking-wider">Minutes</div>
+            <div className="relative bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl md:rounded-2xl"></div>
+              <div className="relative text-3xl md:text-6xl font-bold text-white font-serif">{timeLeft.minutes}</div>
+              <div className="relative text-[10px] md:text-sm text-white/80 mt-1 md:mt-2 uppercase tracking-wider">Minutes</div>
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 min-w-[90px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl"></div>
-              <div className="relative text-4xl md:text-6xl font-bold text-white font-serif">{timeLeft.seconds}</div>
-              <div className="relative text-xs md:text-sm text-white/80 mt-2 uppercase tracking-wider">Seconds</div>
+            <div className="relative bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[120px] shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl md:rounded-2xl"></div>
+              <div className="relative text-3xl md:text-6xl font-bold text-white font-serif">{timeLeft.seconds}</div>
+              <div className="relative text-[10px] md:text-sm text-white/80 mt-1 md:mt-2 uppercase tracking-wider">Seconds</div>
             </div>
           </div>
         </div>
