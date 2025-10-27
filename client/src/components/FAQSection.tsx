@@ -24,7 +24,7 @@ export function FAQSection() {
       answer: "You should aim to arrive at least 15 minutes before the ceremony starts. This gives you plenty of time to find a seat, settle in, and avoid any last-minute disruptions. Arriving any later could risk missing the start of the ceremony or interrupting key moments. It's always better to be early than to rush and potentially miss out!",
     },
     {
-      question: "Are Children Welcome?",
+      question: "Are children welcome?",
       answer: "As much as we love your little ones, our wedding is exclusively for adults. Thank you for understanding 😊.",
     },
     {
